@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/contentview.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="first">
+                <a href="/courses/class-9th"><i class="ri-arrow-left-wide-line"></i></a>
+            </div>
+            <div class="second">
+                <p>
+                    <%= subject.toUpperCase() %>
+                </p>
+            </div>
+            <div class="third">
+                <i class="ri-search-line"></i>
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <% if (subject=="physics" ) { %>
+        <%- include("./content/physics.ejs") %>
+            <% } else if (subject=="english" ) { %>
+                <%- include("./content/english.ejs") %>
+                    <% } else if (subject=="math" ) { %>
+                    <%- include("./content/math.ejs") %>
+                    <% } else if (subject=="biology") { %>
+                        <%- include("./content/biology.ejs") %>
+                        <% } else if (subject=="chemistry") { %>
+                        <%- include("./content/chemistry.ejs") %>
+                        <% } else if (subject=="civics") { %>
+                        <%- include("./content/civics.ejs") %>
+                        <% } else if (subject=="economics") { %>
+                        <%- include("./content/economics.ejs") %>
+                        <% } else if (subject=="geography.ejs") { %>
+                        <%- include("./content/geography.ejs") %>
+                        <% } else if (subject=="hindi") { %>
+                        <%- include("./content/hindi.ejs") %>
+                        <% } else if (subject=="history") { %>
+                        <%- include("./content/history.ejs") %>
+                        <% } else if (subject=="sanskrit") { %>
+                        <%- include("./content/sanskrit.ejs") %>
+                        <% } %>
+</body>
+
+</html>
