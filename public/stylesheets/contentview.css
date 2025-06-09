@@ -9,6 +9,7 @@ html,
 body {
     width: 100%;
     background-color: rgba(0,0,0,0.1);
+    animation: all 0.1s ease-in;
 }
 
 header {
