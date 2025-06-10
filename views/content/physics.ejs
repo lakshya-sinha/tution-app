@@ -4,90 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="css/style.css" rel="stylesheet">
+    <title>Chapters List</title>
+    <style>
+        body {
+            background: #f7f9fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .element {
+            background: #fff;
+            margin: 24px auto;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            max-width: 700px;
+            transition: box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .element:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+        }
+
+        .element h3 {
+            margin: 0;
+            padding: 22px 28px;
+            font-size: 1.3rem;
+            background: #e8f0fe;
+            border-radius: 14px 14px 0 0;
+            color: #1a237e;
+            user-select: none;
+        }
+
+        .c1Item {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px 32px;
+            gap: 18px;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-12px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        .chapter-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 22px;
+        }
+
+        .c1Item a {
+            padding: 7px 12px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #1976d2;
+            color: #1976d2;
+            text-decoration: none;
+            background: #e3f2fd;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .c1Item a:hover {
+            background: #1976d2;
+            color: #fff;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 0 0 16px 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="Ch1">
-        <h3>Chapter 1 (Prakash Main Prawartan) </i></h3>
+    <div class="Ch1 element">
+        <h3>Chapter 1 (Prakash Main Prawartan)</h3>
         <div class="c1Item">
-            <a href="/preview/RWLYiDP23w8">Chapter 1 (Part -1)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/bh0Z4xvid5c">Chapter 1 (Part -2)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/jRTQYKcyX6U">Chapter 1 (Part -3)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/TWLIBb-Pkf4">Chapter 1 (Part -4)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/O7x3b1wVPBM">Chapter 1 (Part -5)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/eH0VU81v9lE">Chapter 1 (Part -6)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/TEJGIyv2_Rg">Chapter 1 (Part -7)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/PokKDvRA0bk">Chapter 1 (Part -8)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/y-bJl5uFtPM">Chapter 1 (Part -9)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/ST8_joZeY1c?">Chapter 1 (Part -10)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/k6yqcFCnrEU">Chapter 1 (Part -11)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/1nEcwXM42xA">Chapter 1 (Part -12)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/sXFYa5v2Nr8">Chapter 1 (Part -13)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/v8OY8RQdAs0">Chapter 1 (Part -14)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/7SDzOn4nhPI">Chapter 1 (Part -15)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/TAnMexdsagI">Chapter 1 (Part -16)</a> &nbsp; <a href="">Pdf</a> <br>
+            <div class="chapter-links">
+                <a href="/preview/RWLYiDP23w8">Part 1</a> <a href="">Pdf</a>
+                <a href="/preview/bh0Z4xvid5c">Part 2</a> <a href="">Pdf</a>
+                <a href="/preview/jRTQYKcyX6U">Part 3</a> <a href="">Pdf</a>
+                <a href="/preview/TWLIBb-Pkf4">Part 4</a> <a href="">Pdf</a>
+                <a href="/preview/O7x3b1wVPBM">Part 5</a> <a href="">Pdf</a>
+                <a href="/preview/eH0VU81v9lE">Part 6</a> <a href="">Pdf</a>
+                <a href="/preview/TEJGIyv2_Rg">Part 7</a> <a href="">Pdf</a>
+                <a href="/preview/PokKDvRA0bk">Part 8</a> <a href="">Pdf</a>
+                <a href="/preview/y-bJl5uFtPM">Part 9</a> <a href="">Pdf</a>
+                <a href="/preview/ST8_joZeY1c?">Part 10</a> <a href="">Pdf</a>
+                <a href="/preview/k6yqcFCnrEU">Part 11</a> <a href="">Pdf</a>
+                <a href="/preview/1nEcwXM42xA">Part 12</a> <a href="">Pdf</a>
+                <a href="/preview/sXFYa5v2Nr8">Part 13</a> <a href="">Pdf</a>
+                <a href="/preview/v8OY8RQdAs0">Part 14</a> <a href="">Pdf</a>
+                <a href="/preview/7SDzOn4nhPI">Part 15</a> <a href="">Pdf</a>
+                <a href="/preview/TAnMexdsagI">Part 16</a> <a href="">Pdf</a>
+            </div>
         </div>
-        
     </div>
     <hr>
-    <div class="Ch2">
-        <h3>Chapter 2 (Prakash Main Apwartan) </i></h3>
+    <div class="Ch2 element">
+        <h3>Chapter 2 (Prakash Main Apwartan)</h3>
         <div class="c1Item">
-            <a href="/preview/Y2ThSbSJtRk">Chapter 2 (Part -1)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/xz0CzQo3TDk">Chapter 2 (Part -2)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/uz0ae82u0R8">Chapter 2 (Part -3)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/06fZ9REO-9I">Chapter 2 (Part -4)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/wyHAo8-aVlY">Chapter 2 (Part -5)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/4EuL5pNmiw8">Chapter 2 (Part -6)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/5k4731DcWE8">Chapter 2 (Part -7)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/XXucz519Pvk">Chapter 2 (Part -8)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/EY0-hwEyhj0">Chapter 2 (Part -9)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/o4BmVkjPPLE">Chapter 2 (Part -10)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/kUIZy4tFN8U">Chapter 2 (Part -11)</a> &nbsp; <a href="">Pdf</a> <br>
+            <div class="chapter-links">
+                <a href="/preview/Y2ThSbSJtRk">Part 1</a> <a href="">Pdf</a>
+                <a href="/preview/xz0CzQo3TDk">Part 2</a> <a href="">Pdf</a>
+                <a href="/preview/uz0ae82u0R8">Part 3</a> <a href="">Pdf</a>
+                <a href="/preview/06fZ9REO-9I">Part 4</a> <a href="">Pdf</a>
+                <a href="/preview/wyHAo8-aVlY">Part 5</a> <a href="">Pdf</a>
+                <a href="/preview/4EuL5pNmiw8">Part 6</a> <a href="">Pdf</a>
+                <a href="/preview/5k4731DcWE8">Part 7</a> <a href="">Pdf</a>
+                <a href="/preview/XXucz519Pvk">Part 8</a> <a href="">Pdf</a>
+                <a href="/preview/EY0-hwEyhj0">Part 9</a> <a href="">Pdf</a>
+                <a href="/preview/o4BmVkjPPLE">Part 10</a> <a href="">Pdf</a>
+                <a href="/preview/kUIZy4tFN8U">Part 11</a> <a href="">Pdf</a>
+            </div>
         </div>
-        <hr>
-
     </div>
-    <div class="Ch3">
-        <h3>Chapter 3 (Manav Netra) </i></h3>
+    <hr>
+    <div class="Ch3 element">
+        <h3>Chapter 3 (Manav Netra)</h3>
         <div class="c1Item">
-            <a href="/preview/Ye7Eadl6r4-c">Chapter 3 (Part -1)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/U3uXPpWZvdE">Chapter 3 (Part -2)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/j_A4KjjgysI">Chapter 3 (Part -3)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/qn_mIjjEIOs">Chapter 3 (Part -4)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/vNk0Eo1I_BQ">Chapter 3 (Part -5)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/6BIKbSREc-0">Chapter 3 (Part -6)</a> &nbsp; <a href="">Pdf</a> <br>
+            <div class="chapter-links">
+                <a href="/preview/Ye7Eadl6r4-c">Part 1</a> <a href="">Pdf</a>
+                <a href="/preview/U3uXPpWZvdE">Part 2</a> <a href="">Pdf</a>
+                <a href="/preview/j_A4KjjgysI">Part 3</a> <a href="">Pdf</a>
+                <a href="/preview/qn_mIjjEIOs">Part 4</a> <a href="">Pdf</a>
+                <a href="/preview/vNk0Eo1I_BQ">Part 5</a> <a href="">Pdf</a>
+                <a href="/preview/6BIKbSREc-0">Part 6</a> <a href="">Pdf</a>
+            </div>
         </div>
-        <hr>
-         </div>
-      </div>
-    <div class="Ch4">
-         <h3>Chapter 4 (Vidhuuat Dhara) </i></h3> 
+    </div>
+    <hr>
+    <div class="Ch4 element">
+        <h3>Chapter 4 (Vidhuuat Dhara)</h3>
         <div class="c1Item">
-            <a href="/preview/aQAXhFu7YLc">Chapter 4 (Part -1)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/NbWV7rnFBIk">Chapter 4 (Part -2)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/BY1iwrRuB9g">Chapter 4 (Part -3)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/hKqHiiE9ro4">Chapter 4 (Part -4)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/qExv8ufbKQI">Chapter 4 (Part -5)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/kUTXmF1To9c">Chapter 4 (Part -6)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/_obyyJd2gPw">Chapter 4 (Part -7)</a> &nbsp; <a href="">Pdf</a> <br>
+            <div class="chapter-links">
+                <a href="/preview/aQAXhFu7YLc">Part 1</a> <a href="">Pdf</a>
+                <a href="/preview/NbWV7rnFBIk">Part 2</a> <a href="">Pdf</a>
+                <a href="/preview/BY1iwrRuB9g">Part 3</a> <a href="">Pdf</a>
+                <a href="/preview/hKqHiiE9ro4">Part 4</a> <a href="">Pdf</a>
+                <a href="/preview/qExv8ufbKQI">Part 5</a> <a href="">Pdf</a>
+                <a href="/preview/kUTXmF1To9c">Part 6</a> <a href="">Pdf</a>
+                <a href="/preview/_obyyJd2gPw">Part 7</a> <a href="">Pdf</a>
+            </div>
         </div>
-        <hr>
     </div>
-    <div class="Ch5">
-        <h3>Chapter 5 (Vidhiuat Dhara Chumukiye Prawav) </i></h3> 
+    <hr>
+    <div class="Ch5 element">
+        <h3>Chapter 5 (Vidhiuat Dhara Chumukiye Prawav)</h3>
         <div class="c1Item">
-            <a href="/preview/zUUPMXK697c">Chapter 5 (Part -1)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/VJnuAnEWVMQ">Chapter 5 (Part -2)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/P-KHQC-RiS4">Chapter 5 (Part -3)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/QelbKPZR0GM">Chapter 5 (Part -4)</a> &nbsp; <a href="">Pdf</a> <br>
-            <a href="/preview/a9s3TiBtlNo">Chapter 5 (Part -5)</a> &nbsp; <a href="">Pdf</a> <br>
+            <div class="chapter-links">
+                <a href="/preview/zUUPMXK697c">Part 1</a> <a href="">Pdf</a>
+                <a href="/preview/VJnuAnEWVMQ">Part 2</a> <a href="">Pdf</a>
+                <a href="/preview/P-KHQC-RiS4">Part 3</a> <a href="">Pdf</a>
+                <a href="/preview/QelbKPZR0GM">Part 4</a> <a href="">Pdf</a>
+                <a href="/preview/a9s3TiBtlNo">Part 5</a> <a href="">Pdf</a>
+            </div>
         </div>
-        <hr>
     </div>
-    </div>
+    <script>
+        // Toggle chapter content
+        document.querySelectorAll('.element').forEach(function (el) {
+            el.addEventListener('click', function (e) {
+                // Prevent toggling when clicking a link
+                if (e.target.tagName.toLowerCase() === 'a') return;
+                const content = this.querySelector('.c1Item');
+                const isVisible = content.style.display === 'flex';
+                // Hide all
+                document.querySelectorAll('.c1Item').forEach(c => c.style.display = 'none');
+                // Show current if not already visible
+                if (!isVisible) content.style.display = 'flex';
+            });
+        });
+    </script>
 </body>
 
 </html>
+

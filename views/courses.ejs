@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link href="/stylesheets/courses.css" rel="stylesheet">
-        <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="first">
-                   <a href="/home"><i class="ri-arrow-left-wide-line"></i></a> 
-                </div>
-                <div class="second">
-                   <p>My Courses</p> 
-                </div>
-                <div class="third">
-                   <i class="ri-search-line"></i> 
-                   <i class="ri-menu-line"></i>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="courseContainer">
-                <div class="course1">
-                    <img src="https://pngimg.com/uploads/shrek/shrek_PNG16.png" alt=" image cannot load" id="courseImg">
-                    <p>Class 10th New Batch 2025 All subject (l)</p>
-                    <p id="exp">Expirty Date: </p>
-                   <div class="buttonsContainer">
-                   <i class="ri-user-fill"></i>
-                    <a href="#" id="btn">Details</a>
-                    <a href="/courses/class-9" id="btn">Content</a> 
-                   </div> 
-                </div> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="/stylesheets/courses.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <%- include("includes/sidebar.ejs") %>
+    </div>
+    <header>
+        <nav>
+            <div class="first">
+                <a href="/home"><i class="ri-arrow-left-wide-line"></i></a>
             </div>
-        </main>
-    </body>
+            <div class="second">
+                <p>My Courses</p>
+            </div>
+            <div class="third">
+                <i class="ri-search-line"></i>
+                <a href="#" class="menu"><i class="ri-menu-line"></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="courseContainer">
+            <div class="course1">
+                <img src="https://pngimg.com/uploads/shrek/shrek_PNG16.png" alt=" image cannot load" id="courseImg">
+                <p>Class 10th New Batch 2025 All subject (l)</p>
+                <p id="exp">Expirty Date: </p>
+                <div class="buttonsContainer">
+                    <i class="ri-user-fill"></i>
+                    <a href="#" id="btn">Details</a>
+                    <a href="/courses/class-10" id="btn">Content</a>
+                </div>
+            </div>
+            <div class="course1">
+                <img src="https://pngimg.com/uploads/shrek/shrek_PNG16.png" alt=" image cannot load" id="courseImg">
+                <p>Class 10th New Batch 2025 All subject (l)</p>
+                <p id="exp">Expirty Date: </p>
+                <div class="buttonsContainer">
+                    <i class="ri-user-fill"></i>
+                    <a href="#" id="btn">Details</a>
+                    <a href="/courses/class-9" id="btn">Content</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script>
+        let sidebar = document.querySelector(".sidebar")
+        let menu = document.querySelector(".menu");
+        let click = 0;
+        menu.addEventListener("click", () => {
+            if (click == 0) {
+                sidebar.style.right = "0px";
+                click = 1;
+            } else {
+                sidebar.style.right = "-400px";
+                click = 0;
+            }
+        })
+    </script>
+</body>
 
 </html>

@@ -11,89 +11,114 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="first">
-                <a href="/home/courses"><i class="ri-arrow-left-wide-line"></i></a>
-            </div>
-            <div class="second">
-                <p>Categories</p>
-            </div>
-            <div class="third">
-                <i class="ri-search-line"></i>
-                <i class="ri-menu-line"></i>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="physics item">
-            <a href="/courses/class-9th/physics">
-                <i class="ri-price-tag-3-line"></i>
-                <p>PHYSICS</p>
-            </a>
-        </div>
-        <div class="english item">
-            <a href="/courses/class-9th/english">
-                <i class="ri-price-tag-3-line"></i>
-                <p>ENGLISH</p>
-            </a>
-        </div>
-        <div class="math item">
-            <a href="/courses/class-9th/math">
-                <i class="ri-price-tag-3-line"></i>
-                <p>MATH</p>
-            </a>
-        </div>
-        <div class="history item">
-            <a href="/courses/class-9th/history">
-                <i class="ri-price-tag-3-line"></i>
-                <p>HISTORY</p>
-            </a>
-        </div>
-        <div class="biology item">
-            <a href="/courses/class-9th/biology">
-                <i class="ri-price-tag-3-line"></i>
-                <p>BIOLOGY</p>
-            </a>
-        </div>
-        <div class="hindi item">
-            <a href="/courses/class-9th/hindi">
-                <i class="ri-price-tag-3-line"></i>
-                <p>HINDI</p>
-            </a>
-        </div>
-        <div class="civics item">
-            <a href="/courses/class-9th/civics">
-                <i class="ri-price-tag-3-line"></i>
-                <p>CIVICS</p>
-            </a>
-        </div>
-        <div class="sanskrit item">
-            <a href="/courses/class-9th/sanskrit">
-                <i class="ri-price-tag-3-line"></i>
-                <p>SANSKRIT</p>
-            </a>
-        </div>
-        <div class="chemistry item">
-            <a href="/courses/class-9th/chemistry">
-                <i class="ri-price-tag-3-line"></i>
-                <p>CHEMISTRY</p>
-            </a>
-        </div>
-        <div class="economics item">
-            <a href="/courses/class-9th/economics">
-                <i class="ri-price-tag-3-line"></i>
-                <p>ECONOMICS</p>
-            </a>
-        </div>
-        <div class="geography item">
-            <a href="/courses/class-9th/geography">
-                <i class="ri-price-tag-3-line"></i>
-                <p>GEOGRAPHY</p>
-            </a>
-        </div>
+    <div class="sidebar">
+        <%- include("includes/sidebar.ejs") %> 
+    </div>
+       <header>
+            <nav>
+                <div class="first">
+                    <a href="/home/courses"><i class="ri-arrow-left-wide-line"></i></a>
+                </div>
+                <div class="second">
+                    <p>Categories</p>
+                </div>
+                <div class="third">
+                    <i class="ri-search-line"></i>
+                    <a href="#" class="menu">
+                        <i class="ri-menu-line"></i></a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1>
+                <%= stuclass.toUpperCase() %>
+            </h1><br>
+            <% if (stuclass=="class-10" ) { %>
+                <div class="physics item">
+                    <a href="/courses/class-10/physics">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>PHYSICS</p>
+                    </a>
+                </div>
+                <div class="english item">
+                    <a href="/courses/class-10/english">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>ENGLISH</p>
+                    </a>
+                </div>
+                <div class="math item">
+                    <a href="/courses/class-10/math">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>MATH</p>
+                    </a>
+                </div>
+                <div class="history item">
+                    <a href="/courses/class-10/history">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>HISTORY</p>
+                    </a>
+                </div>
+                <div class="biology item">
+                    <a href="/courses/class-10/biology">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>BIOLOGY</p>
+                    </a>
+                </div>
+                <div class="hindi item">
+                    <a href="/courses/class-10/hindi">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>HINDI</p>
+                    </a>
+                </div>
+                <div class="civics item">
+                    <a href="/courses/class-10/civics">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>CIVICS</p>
+                    </a>
+                </div>
+                <div class="sanskrit item">
+                    <a href="/courses/class-10/sanskrit">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>SANSKRIT</p>
+                    </a>
+                </div>
+                <div class="chemistry item">
+                    <a href="/courses/class-10/chemistry">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>CHEMISTRY</p>
+                    </a>
+                </div>
+                <div class="economics item">
+                    <a href="/courses/class-10/economics">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>ECONOMICS</p>
+                    </a>
+                </div>
+                <div class="geography item">
+                    <a href="/courses/class-10/geography">
+                        <i class="ri-price-tag-3-line"></i>
+                        <p>GEOGRAPHY</p>
+                    </a>
+                </div>
+                <% } else { %>
+                    <h1>Unknow Courses Plz Check Courses</h1>
+                    <% } %>
+        </main>
 
-    </main>
+    <script>
+        let sidebar = document.querySelector(".sidebar")
+        let menu = document.querySelector(".menu");
+        let click = 0;
+        menu.addEventListener("click", () => {
+            if (click == 0) {
+                sidebar.style.right = "0px";
+                click = 1;
+            } else {
+                sidebar.style.right = "-400px";
+                click = 0;
+            }
+        })
+    </script>
 </body>
 
 </html>

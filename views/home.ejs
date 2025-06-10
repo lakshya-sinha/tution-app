@@ -10,10 +10,14 @@
 </head>
 
 <body>
+    <div class="sidebar">
+        <%- include("includes/sidebar.ejs") %>
+    </div>
     <header>
         <nav>
             <ul class="navbar">
-                <i class="ri-menu-2-line"></i>
+                <a href="#" class="menu">
+                <i class="ri-menu-2-line"></i></a>
                 <div class="row-nav">
                     <i class="ri-notification-fill"></i>
                <a href="/logout"><i class="ri-logout-box-line"></i></a> 
@@ -104,6 +108,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar")
+        let menu = document.querySelector(".menu");
+        let click = 0;
+        menu.addEventListener("click", () => {
+            if (click == 0) {
+                sidebar.style.left = "0px";
+                click = 1;
+            } else {
+                sidebar.style.left = "-1200px";
+                click = 0;
+            }
+        })
+    </script>
 </body>
 
 </html>
